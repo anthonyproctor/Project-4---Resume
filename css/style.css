@@ -219,3 +219,7 @@ span {
     display: block;
   }
 }
+
+#no_indent {
+    padding: 10px 0;
+   }
