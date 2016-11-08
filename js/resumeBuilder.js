@@ -15,7 +15,7 @@ var bio = {
     "skills": [
         "Buring my mouth on pizza", "Losing sunglasses", "Parallel parking", "Eating leftovers"
     ],
-    "bioPic": "images/anthonyproctor.jpg"
+    "biopic": "images/anthonyproctor.jpg"
 };
 
 var work = {
@@ -58,13 +58,13 @@ var education = {
         "location": "Golden, CO",
         "degree": "Bachelors",
         "majors": ["CS"],
-        "dates": 2018,
+        "dates": "2018",
         "url": "www.mines.edu"
     },],
     "onlineCourses": [{
         "title": "Front-End Developer Nanodegree",
         "school": "Udacity",
-        "dates": 2016,
+        "dates": "2016",
         "url": "https://www.udacity.com"
     },]
 };
@@ -74,7 +74,7 @@ bio.display = function() {
 
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
+    var formattedBioPic = HTMLbioPic.replace('%data%', bio.biopic);
     var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
     var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
     var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
@@ -85,16 +85,11 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
     $('#header').append(formattedBioPic);
-    $('#topContacts').append(formattedMobile);
-    $('#footerContacts').append(formattedMobile);
-    $('#topContacts').append(formattedEmail);
-    $('#footerContacts').append(formattedEmail);
-    $('#topContacts').append(formattedGithub);
-    $('#footerContacts').append(formattedGithub);
-    $('#topContacts').append(formattedTwitter);
-    $('#footerContacts').append(formattedGithub);
-    $('#topContacts').append(formattedLocation);
-    $('#footerContacts').append(formattedGithub);
+    $('#topContacts, #footerContacts').append(formattedMobile);
+    $('#topContacts, #footerContacts').append(formattedEmail);
+    $('#topContacts, #footerContacts').append(formattedGithub);
+    $('#topContacts, #footerContacts').append(formattedTwitter);
+    $('#topContacts, #footerContacts').append(formattedLocation);
     $('#header').append(formattedwelcomeMsg);
     $('#header').append(HTMLskillsStart);
 
